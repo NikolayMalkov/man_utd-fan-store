@@ -1,0 +1,21 @@
+.wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
