@@ -7,12 +7,16 @@ import Training from './Training';
 import Women from './Women';
 
 
+
+
 export default function Main() {
 
 
 
     return (
         <div className={classes.content_wrap}>
+
+
 
             <div className={classes.search_line}>
                 <h3>Catalog</h3>
@@ -22,22 +26,23 @@ export default function Main() {
 
             </div>
 
-            <ItemsCard />
+            <div className={classes.catalog_items}>
 
-            <Switch>
-                <Route path="/kits">
-                    <Kits />
-                </Route>
-                <Route path="/train">
-                    <Training />
-                </Route>
-                <Route path="/women">
-                    <Women />
-                </Route>
-                <Route path="/cart">
-                   
-                </Route>
-            </Switch>
+                <Switch>
+                    <Route path="/kits">
+                        <Kits />
+                    </Route>
+                    <Route path="/train">
+                        <Training />
+                    </Route>
+                    <Route path="/women">
+                        <Women />
+                    </Route>
+                </Switch>
+
+            </div>
+
+
 
         </div>
 

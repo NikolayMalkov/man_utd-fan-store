@@ -1,12 +1,20 @@
 import classes from '../css/navbar.module.css';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import ShopCart from './ShopCart';
 
 function Navbar() {
+
+    const [cartVisible, setCartVisible] = useState(false);
 
     return (
 
         <div className={classes.navbar}>
+
+
+            {cartVisible ? <ShopCart setCartVisible={() => setCartVisible(false)} /> : null}
+
 
             <div className={classes.nav_left}>
                 <img src="manchester-united.svg" alt="logo" />
@@ -26,15 +34,17 @@ function Navbar() {
                     <li><Link to="/train" >TRAINING</Link></li>
                     <li><Link to="/women" >WOMEN</Link></li>
                 </ul>
-                
+
             </div>
 
-           
+
 
             <div className={classes.cart}>
-                
-                <Link to="/cart"><ShoppingCartIcon className={classes.cart_icon} /></Link>
-                
+
+                <ShoppingCartIcon className={classes.cart_icon} onClick={() => setCartVisible(true)} />
+
+
+
             </div>
 
         </div>

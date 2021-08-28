@@ -13,9 +13,9 @@ function App() {
           <Navbar />
         </header>
 
-        <content>
+      
           <Main />
-        </content>
+      
 
         <footer>
           <About />

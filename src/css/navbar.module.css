@@ -84,10 +84,11 @@ header{
     font-size: 20px;
   }
 
-  .cart a .cart_icon{
+  .cart .cart_icon{
     color: red;
     width: 70px;
     height: 70px;
+    cursor: pointer;
   }
 
  

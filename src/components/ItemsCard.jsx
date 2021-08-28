@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin: 20
   },
   media: {
     height: 160,
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function ItemsCard() {
+export default function ItemsCard({img, title, price}) {
   const classes = useStyles();
 
   return (
@@ -36,11 +37,11 @@ export default function ItemsCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://1.bp.blogspot.com/-pQDQCqOD7mI/YO_vcj7yrEI/AAAAAAACuT0/kEpVPXzMxe8132P7vu_cgbjX98iyFdwegCLcBGAsYHQ/s1000/manchester-united-21-22-home-kit-7.jpg"
+          image={img}
         />
         <CardContent>
           <Typography className={classes.descr} gutterBottom variant="h5" component="h2">
-            Manchester United home kit 21/22
+            {title}
           </Typography>
           {/* <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -50,7 +51,7 @@ export default function ItemsCard() {
       </CardActionArea>
       <CardActions>
         <Button className={classes.btn}  color="primary">
-          $ 100
+          {price}
         </Button>
         
       </CardActions>
