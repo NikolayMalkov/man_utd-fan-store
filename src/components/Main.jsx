@@ -29,6 +29,9 @@ export default function Main() {
             <div className={classes.catalog_items}>
 
                 <Switch>
+                    <Route exact path="/">
+                        <Kits />
+                    </Route>
                     <Route path="/kits">
                         <Kits />
                     </Route>

@@ -17,7 +17,7 @@ function Navbar() {
 
 
             <div className={classes.nav_left}>
-                <img src="manchester-united.svg" alt="logo" />
+                <img src="mulogo.png" alt="logo" style={{width: '120px', height: '110px'}} />
             </div>
 
             <div className={classes.nav_text}>

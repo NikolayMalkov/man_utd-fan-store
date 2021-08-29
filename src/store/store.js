@@ -4,13 +4,15 @@ import thunk from 'redux-thunk';
 import kits_reducer from "./kits_reducer";
 import training_reducer from "./training_reducer"
 import womenkits_reducer from "./womenkits_reducer"
+import shopcart_reducer from "./shopcart_reducer"
 
 
 const reducers = combineReducers(
     {
         kits: kits_reducer,
         training: training_reducer,
-        womenkits: womenkits_reducer
+        womenkits: womenkits_reducer,
+        shopcart: shopcart_reducer
     },
 )
 
